@@ -1,0 +1,586 @@
+/* =========================================
+   FITCORE — GLOBAL DESIGN SYSTEM
+========================================= */
+
+:root {
+  font-family:
+    Inter,
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  color: #f5f5f5;
+  background: #080808;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --fc-black: #080808;
+  --fc-dark: #0d0d0d;
+  --fc-panel: #111111;
+  --fc-panel-light: #171717;
+
+  --fc-white: #ffffff;
+  --fc-muted: #969696;
+  --fc-soft: #bdbdbd;
+
+  --fc-lime: #d8ff3e;
+  --fc-lime-light: #e4ff72;
+
+  --fc-border: rgba(255, 255, 255, 0.09);
+
+  --fc-container: 1380px;
+
+  --fc-radius-sm: 10px;
+  --fc-radius-md: 16px;
+  --fc-radius-lg: 24px;
+
+  --fc-transition: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--fc-black);
+
+  scroll-behavior: smooth;
+
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  margin: 0;
+
+  background: var(--fc-black);
+  color: var(--fc-white);
+
+  overflow-x: hidden;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+input,
+textarea,
+select {
+  outline: none;
+}
+
+/* =========================================
+   ROOT
+========================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+.fitcore-app {
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--fc-black);
+}
+
+/* =========================================
+   MAIN
+========================================= */
+
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* =========================================
+   SELECTION
+========================================= */
+
+::selection {
+  background: var(--fc-lime);
+  color: var(--fc-black);
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #343434;
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fc-lime);
+}
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  color: var(--fc-white);
+
+  font-weight: 800;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.04em;
+}
+
+p {
+  margin: 0;
+
+  color: var(--fc-muted);
+
+  line-height: 1.7;
+}
+
+strong {
+  color: var(--fc-white);
+}
+
+/* =========================================
+   GLOBAL CONTAINER
+========================================= */
+
+.fc-container {
+  width: min(var(--fc-container), calc(100% - 48px));
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   EYEBROW LABEL
+========================================= */
+
+.fc-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: var(--fc-lime);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.fc-eyebrow::before {
+  content: "";
+
+  width: 22px;
+  height: 1px;
+
+  background: var(--fc-lime);
+}
+
+/* =========================================
+   COMMON BUTTON
+========================================= */
+
+.fc-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-height: 52px;
+
+  padding: 0 21px;
+
+  border-radius: var(--fc-radius-sm);
+
+  font-size: 12px;
+  font-weight: 850;
+
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+
+  transition:
+    transform var(--fc-transition),
+    background var(--fc-transition),
+    color var(--fc-transition),
+    border-color var(--fc-transition),
+    box-shadow var(--fc-transition);
+}
+
+.fc-button-primary {
+  background: var(--fc-lime);
+  color: var(--fc-black);
+}
+
+.fc-button-primary:hover {
+  background: var(--fc-lime-light);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(216, 255, 62, 0.14);
+}
+
+.fc-button-secondary {
+  color: var(--fc-white);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid var(--fc-border);
+}
+
+.fc-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+
+  border-color: rgba(255, 255, 255, 0.17);
+
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   IMAGE WRAPPER
+========================================= */
+
+.fc-image {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #151515;
+}
+
+.fc-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fc-image:hover img {
+  transform: scale(1.045);
+}
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.fc-divider {
+  width: 100%;
+  height: 1px;
+
+  background: var(--fc-border);
+}
+
+/* =========================================
+   PAGE TOP SPACING
+========================================= */
+
+.fc-page {
+  padding-top: 110px;
+}
+
+/* =========================================
+   FOCUS STATES
+========================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--fc-lime);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   FORM ELEMENTS
+========================================= */
+
+input,
+textarea,
+select {
+  color: var(--fc-white);
+
+  background: transparent;
+
+  border: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6e6e6e;
+}
+
+select option {
+  background: #111111;
+  color: #ffffff;
+}
+
+/* =========================================
+   DISABLE IMAGE DRAG
+========================================= */
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .fc-container {
+    width: min(100% - 32px, var(--fc-container));
+  }
+
+  .fc-page {
+    padding-top: 92px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.035em;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .fc-container {
+    width: calc(100% - 28px);
+  }
+
+  .fc-button {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+.scroll-reveal {
+  opacity: 0;
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+  transition-delay: var(--reveal-delay);
+
+  will-change: opacity, transform;
+}
+
+
+/* FROM BOTTOM */
+
+.scroll-reveal-up {
+  transform: translateY(70px);
+}
+
+
+/* FROM LEFT */
+
+.scroll-reveal-left {
+  transform: translateX(-70px);
+}
+
+
+/* FROM RIGHT */
+
+.scroll-reveal-right {
+  transform: translateX(70px);
+}
+
+
+/* SCALE */
+
+.scroll-reveal-scale {
+  transform: scale(0.88);
+}
+
+
+/* VISIBLE */
+
+.scroll-reveal-visible {
+  opacity: 1;
+
+  transform:
+    translateX(0)
+    translateY(0)
+    scale(1);
+}
+
+
+/* IMAGE ZOOM */
+
+.scroll-image-reveal {
+  overflow: hidden;
+}
+
+.scroll-image-reveal img {
+  transform: scale(1.12);
+
+  transition:
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-image-reveal.scroll-reveal-visible img {
+  transform: scale(1);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .scroll-reveal-up {
+    transform: translateY(45px);
+  }
+
+  .scroll-reveal-left {
+    transform: translateX(-45px);
+  }
+
+  .scroll-reveal-right {
+    transform: translateX(45px);
+  }
+
+}
+
+
+/* REDUCE MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .scroll-image-reveal img {
+    transform: none;
+    transition: none;
+  }
+
+}
+
+
+/* FITCORE scroll reveal — isolated animation styles */
+
+[data-reveal] {
+  opacity: 0;
+  transition:
+    opacity 700ms ease,
+    translate 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal="up"] {
+  translate: 0 32px;
+}
+
+[data-reveal="left"] {
+  translate: -32px 0;
+}
+
+[data-reveal="right"] {
+  translate: 32px 0;
+}
+
+[data-reveal="fade"] {
+  translate: 0 0;
+}
+
+[data-reveal].fc-revealed {
+  opacity: 1;
+  translate: 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],  
+  [data-reveal].fc-revealed {
+    opacity: 1;
+    translate: none;
+    transition: none;
+  }
+}

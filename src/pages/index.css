@@ -1,0 +1,112 @@
+/* =========================================
+   GLOBAL SCROLL REVEAL ANIMATIONS
+========================================= */
+
+.scroll-reveal {
+  opacity: 0;
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+  transition-delay: var(--reveal-delay);
+
+  will-change: opacity, transform;
+}
+
+
+/* FROM BOTTOM */
+
+.scroll-reveal-up {
+  transform: translateY(70px);
+}
+
+
+/* FROM LEFT */
+
+.scroll-reveal-left {
+  transform: translateX(-70px);
+}
+
+
+/* FROM RIGHT */
+
+.scroll-reveal-right {
+  transform: translateX(70px);
+}
+
+
+/* SCALE */
+
+.scroll-reveal-scale {
+  transform: scale(0.88);
+}
+
+
+/* VISIBLE */
+
+.scroll-reveal-visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+
+/* =========================================
+   IMAGE REVEAL
+========================================= */
+
+.scroll-image-reveal {
+  overflow: hidden;
+}
+
+.scroll-image-reveal img {
+  transform: scale(1.12);
+
+  transition:
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-image-reveal.scroll-reveal-visible img {
+  transform: scale(1);
+}
+
+
+/* =========================================
+   STAGGERED CARDS
+========================================= */
+
+.scroll-stagger-1 {
+  transition-delay: 100ms;
+}
+
+.scroll-stagger-2 {
+  transition-delay: 200ms;
+}
+
+.scroll-stagger-3 {
+  transition-delay: 300ms;
+}
+
+.scroll-stagger-4 {
+  transition-delay: 400ms;
+}
+
+
+/* =========================================
+   REDUCE MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .scroll-image-reveal img {
+    transform: none;
+    transition: none;
+  }
+
+}
