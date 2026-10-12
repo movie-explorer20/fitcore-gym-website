@@ -1,7 +1,3 @@
-/* =========================================
-   FITCORE — GLOBAL DESIGN SYSTEM
-========================================= */
-
 :root {
   font-family:
     Inter,
@@ -42,9 +38,7 @@
   --fc-transition: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* =========================================
-   RESET
-========================================= */
+
 
 * {
   margin: 0;
@@ -107,9 +101,7 @@ select {
   outline: none;
 }
 
-/* =========================================
-   ROOT
-========================================= */
+
 
 #root {
   width: 100%;
@@ -125,27 +117,19 @@ select {
   background: var(--fc-black);
 }
 
-/* =========================================
-   MAIN
-========================================= */
 
 main {
   width: 100%;
   min-height: 100vh;
 }
 
-/* =========================================
-   SELECTION
-========================================= */
+
 
 ::selection {
   background: var(--fc-lime);
   color: var(--fc-black);
 }
 
-/* =========================================
-   SCROLLBAR
-========================================= */
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -165,9 +149,6 @@ main {
   background: var(--fc-lime);
 }
 
-/* =========================================
-   TYPOGRAPHY
-========================================= */
 
 h1,
 h2,
@@ -198,9 +179,7 @@ strong {
   color: var(--fc-white);
 }
 
-/* =========================================
-   GLOBAL CONTAINER
-========================================= */
+
 
 .fc-container {
   width: min(var(--fc-container), calc(100% - 48px));
@@ -208,9 +187,6 @@ strong {
   margin: 0 auto;
 }
 
-/* =========================================
-   EYEBROW LABEL
-========================================= */
 
 .fc-eyebrow {
   display: inline-flex;
@@ -235,9 +211,6 @@ strong {
   background: var(--fc-lime);
 }
 
-/* =========================================
-   COMMON BUTTON
-========================================= */
 
 .fc-button {
   display: inline-flex;
@@ -295,10 +268,6 @@ strong {
   transform: translateY(-3px);
 }
 
-/* =========================================
-   IMAGE WRAPPER
-========================================= */
-
 .fc-image {
   position: relative;
 
@@ -321,9 +290,6 @@ strong {
   transform: scale(1.045);
 }
 
-/* =========================================
-   DIVIDER
-========================================= */
 
 .fc-divider {
   width: 100%;
@@ -332,17 +298,10 @@ strong {
   background: var(--fc-border);
 }
 
-/* =========================================
-   PAGE TOP SPACING
-========================================= */
-
 .fc-page {
   padding-top: 110px;
 }
 
-/* =========================================
-   FOCUS STATES
-========================================= */
 
 button:focus-visible,
 a:focus-visible,
@@ -353,9 +312,6 @@ select:focus-visible {
   outline-offset: 3px;
 }
 
-/* =========================================
-   FORM ELEMENTS
-========================================= */
 
 input,
 textarea,
@@ -377,18 +333,12 @@ select option {
   color: #ffffff;
 }
 
-/* =========================================
-   DISABLE IMAGE DRAG
-========================================= */
 
 img {
   user-select: none;
   -webkit-user-drag: none;
 }
 
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 768px) {
   .fc-container {
@@ -406,9 +356,6 @@ img {
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
 
 @media (max-width: 480px) {
   .fc-container {
@@ -420,9 +367,6 @@ img {
   }
 }
 
-/* =========================================
-   REDUCED MOTION
-========================================= */
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -450,35 +394,25 @@ img {
 }
 
 
-/* FROM BOTTOM */
-
 .scroll-reveal-up {
   transform: translateY(70px);
 }
 
-
-/* FROM LEFT */
 
 .scroll-reveal-left {
   transform: translateX(-70px);
 }
 
 
-/* FROM RIGHT */
-
 .scroll-reveal-right {
   transform: translateX(70px);
 }
 
 
-/* SCALE */
-
 .scroll-reveal-scale {
   transform: scale(0.88);
 }
 
-
-/* VISIBLE */
 
 .scroll-reveal-visible {
   opacity: 1;
@@ -489,8 +423,6 @@ img {
     scale(1);
 }
 
-
-/* IMAGE ZOOM */
 
 .scroll-image-reveal {
   overflow: hidden;
@@ -507,8 +439,6 @@ img {
   transform: scale(1);
 }
 
-
-/* MOBILE */
 
 @media (max-width: 768px) {
 
@@ -527,8 +457,6 @@ img {
 }
 
 
-/* REDUCE MOTION */
-
 @media (prefers-reduced-motion: reduce) {
 
   .scroll-reveal {
@@ -543,9 +471,6 @@ img {
   }
 
 }
-
-
-/* FITCORE scroll reveal — isolated animation styles */
 
 [data-reveal] {
   opacity: 0;

@@ -305,11 +305,6 @@
   color: #fff;
 }
 
-
-/* ================================
-   RESPONSIVE
-================================ */
-
 @media (max-width: 1050px) {
   .signup-page {
     grid-template-columns: 1fr;

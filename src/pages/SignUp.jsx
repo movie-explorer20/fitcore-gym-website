@@ -49,10 +49,6 @@ function SignUp() {
     const password = formData.password;
     const confirmPassword = formData.confirmPassword;
 
-    /* ================================
-       VALIDATION
-    ================================= */
-
     if (!name) {
       setError("Please enter your full name.");
       return;
@@ -75,10 +71,6 @@ function SignUp() {
       return;
     }
 
-    /* ================================
-       CHECK EXISTING ACCOUNT
-    ================================= */
-
     const existingUser =
       localStorage.getItem("fitcoreUser");
 
@@ -100,15 +92,7 @@ function SignUp() {
       }
     }
 
-    /* ================================
-       CREATE USER ID
-    ================================= */
-
     const userId = generateUserId();
-
-    /* ================================
-       CREATE USER
-    ================================= */
 
     const user = {
       id: userId,
@@ -116,10 +100,6 @@ function SignUp() {
       email: email,
       password: password,
     };
-
-    /* ================================
-       SAVE USER
-    ================================= */
 
     localStorage.setItem(
       "fitcoreUser",
@@ -131,17 +111,9 @@ function SignUp() {
       "true"
     );
 
-    /* ================================
-       SUCCESS MESSAGE
-    ================================= */
-
     setSuccess(
       `Account created successfully! Your User ID is ${userId}`
     );
-
-    /* ================================
-       GO TO HOME
-    ================================= */
 
     setTimeout(() => {
       navigate("/", {
@@ -153,10 +125,6 @@ function SignUp() {
   return (
     <div className="signup-page">
 
-      {/* =================================
-          LEFT VISUAL
-      ================================= */}
-
       <section className="signup-visual">
 
         <img
@@ -165,8 +133,6 @@ function SignUp() {
         />
 
         <div className="signup-visual-overlay"></div>
-
-        {/* BRAND */}
 
         <Link
           to="/"
@@ -180,8 +146,6 @@ function SignUp() {
             FIT<span>CORE</span>
           </span>
         </Link>
-
-        {/* CONTENT */}
 
         <div className="signup-visual-content">
 
@@ -203,8 +167,6 @@ function SignUp() {
 
         </div>
 
-        {/* FOOTER */}
-
         <div className="signup-visual-footer">
 
           <span>
@@ -219,16 +181,9 @@ function SignUp() {
 
       </section>
 
-
-      {/* =================================
-          RIGHT PANEL
-      ================================= */}
-
       <section className="signup-panel">
 
         <div className="signup-panel-inner">
-
-          {/* MOBILE BRAND */}
 
           <div className="signup-mobile-brand">
 
@@ -249,9 +204,6 @@ function SignUp() {
 
           </div>
 
-
-          {/* HEADING */}
-
           <div className="signup-heading">
 
             <span className="signup-eyebrow">
@@ -271,15 +223,10 @@ function SignUp() {
 
           </div>
 
-
-          {/* FORM */}
-
           <form
             className="signup-form"
             onSubmit={handleSubmit}
           >
-
-            {/* NAME */}
 
             <label className="signup-field">
 
@@ -299,9 +246,6 @@ function SignUp() {
 
             </label>
 
-
-            {/* EMAIL */}
-
             <label className="signup-field">
 
               <span>
@@ -319,9 +263,6 @@ function SignUp() {
               />
 
             </label>
-
-
-            {/* PASSWORD */}
 
             <label className="signup-field">
 
@@ -361,9 +302,6 @@ function SignUp() {
               </div>
 
             </label>
-
-
-            {/* CONFIRM PASSWORD */}
 
             <label className="signup-field">
 
@@ -406,26 +344,17 @@ function SignUp() {
 
             </label>
 
-
-            {/* ERROR */}
-
             {error && (
               <div className="signup-error">
                 {error}
               </div>
             )}
 
-
-            {/* SUCCESS */}
-
             {success && (
               <div className="signup-success">
                 {success}
               </div>
             )}
-
-
-            {/* SUBMIT */}
 
             <button
               type="submit"
@@ -444,9 +373,6 @@ function SignUp() {
 
           </form>
 
-
-          {/* LOGIN */}
-
           <div className="signup-login">
 
             <span>
@@ -459,9 +385,6 @@ function SignUp() {
             </Link>
 
           </div>
-
-
-          {/* BOTTOM */}
 
           <div className="signup-bottom">
 

@@ -119,9 +119,6 @@ function Programs() {
 
       </section>
 
-      {/* =========================================
-          INTRO
-      ========================================= */}
 
       <section className="programs-intro">
 
@@ -161,9 +158,6 @@ function Programs() {
 
       </section>
 
-      {/* =========================================
-          PROGRAM GRID
-      ========================================= */}
 
       <section className="programs-list">
 

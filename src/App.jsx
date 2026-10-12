@@ -20,9 +20,6 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 
 
-/* =========================================
-   AUTH CHECK
-========================================= */
 
 function isUserLoggedIn() {
   return Boolean(
@@ -30,10 +27,6 @@ function isUserLoggedIn() {
   );
 }
 
-
-/* =========================================
-   SCROLL TO TOP
-========================================= */
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -48,11 +41,6 @@ function ScrollToTop() {
 
   return null;
 }
-
-
-/* =========================================
-   PAGE BACKGROUND IMAGES
-========================================= */
 
 const pageBackgrounds = {
   "/":
@@ -72,9 +60,6 @@ const pageBackgrounds = {
 };
 
 
-/* =========================================
-   PROTECTED WEBSITE
-========================================= */
 
 function ProtectedWebsite() {
   const location = useLocation();
@@ -85,8 +70,6 @@ function ProtectedWebsite() {
     return <Navigate to="/login" replace />;
   }
 
-
-  // Get current page background
   const footerBackground =
     pageBackgrounds[location.pathname] ||
     pageBackgrounds["/"];
@@ -145,9 +128,6 @@ function ProtectedWebsite() {
 }
 
 
-/* =========================================
-   MAIN APP
-========================================= */
 
 function App() {
   return (
