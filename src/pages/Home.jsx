@@ -1,7 +1,7 @@
+
 import { Link } from "react-router-dom";
 import ScrollReveal from "../components/ScrollReveal";
 import "./Home.css";
-
 
 /* =========================================
    TRAINING SYSTEMS
@@ -15,7 +15,6 @@ const programs = [
     image:
       "https://assets.webfervor.com/image/17/e0a7ac2af56adba2fb5d92161c434ade.jpeg",
   },
-
   {
     number: "02",
     title: "Performance",
@@ -23,7 +22,6 @@ const programs = [
     image:
       "https://images.squarespace-cdn.com/content/v1/55b1b323e4b0527caaf0ce5b/84d677c1-e444-4cd4-90a7-15a897e24916/MASH-1673.jpg",
   },
-
   {
     number: "03",
     title: "Conditioning",
@@ -33,6 +31,20 @@ const programs = [
   },
 ];
 
+/* =========================================
+   GYM LOCATION
+========================================= */
+
+const gymLocation = "Canary Wharf, London, United Kingdom";
+
+const mapUrl =
+  "https://maps.google.com/maps?q=" +
+  encodeURIComponent(gymLocation) +
+  "&z=14&output=embed";
+
+const directionsUrl =
+  "https://www.google.com/maps/dir/?api=1&destination=" +
+  encodeURIComponent(gymLocation);
 
 /* =========================================
    HOME PAGE
@@ -41,14 +53,9 @@ const programs = [
 function Home() {
   return (
     <div className="home-page">
-
-
-      {/* =====================================
-          HERO
-      ===================================== */}
+      {/* HERO */}
 
       <section className="home-hero">
-
         <div className="home-hero-background">
           <img
             src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2200&q=90"
@@ -58,23 +65,14 @@ function Home() {
 
         <div className="home-hero-overlay"></div>
 
-
         <div className="fc-container home-hero-content">
-
-          <ScrollReveal
-            direction="left"
-            delay={100}
-          >
+          <ScrollReveal direction="left" delay={100}>
             <span className="home-hero-label">
               PREMIUM TRAINING / 01
             </span>
           </ScrollReveal>
 
-
-          <ScrollReveal
-            direction="up"
-            delay={180}
-          >
+          <ScrollReveal direction="up" delay={180}>
             <h1 className="home-hero-title">
               TRAIN
               <br />
@@ -82,11 +80,7 @@ function Home() {
             </h1>
           </ScrollReveal>
 
-
-          <ScrollReveal
-            direction="up"
-            delay={280}
-          >
+          <ScrollReveal direction="up" delay={280}>
             <p className="home-hero-description">
               A premium training environment built
               for people who refuse to settle.
@@ -95,17 +89,9 @@ function Home() {
             </p>
           </ScrollReveal>
 
-
-          <ScrollReveal
-            direction="up"
-            delay={380}
-          >
+          <ScrollReveal direction="up" delay={380}>
             <div className="home-hero-actions">
-
-              <Link
-                to="/membership"
-                className="fc-button"
-              >
+              <Link to="/membership" className="fc-button">
                 <span>Start Training</span>
                 <span>↗</span>
               </Link>
@@ -117,57 +103,28 @@ function Home() {
                 Explore Programs
                 <span>→</span>
               </Link>
-
             </div>
           </ScrollReveal>
-
         </div>
-
 
         <div className="home-hero-bottom">
-
-          <span>
-            SCROLL TO EXPLORE
-          </span>
-
+          <span>SCROLL TO EXPLORE</span>
           <span className="home-scroll-line"></span>
-
-          <span>
-            EST. 2026
-          </span>
-
+          <span>EST. 2026</span>
         </div>
-
       </section>
 
-
-
-      {/* =====================================
-          INTRO
-      ===================================== */}
+      {/* INTRO */}
 
       <section className="home-intro">
-
         <div className="fc-container">
-
           <div className="home-intro-grid">
-
-
-            <ScrollReveal
-              direction="left"
-            >
-              <div className="home-section-number">
-                01
-              </div>
+            <ScrollReveal direction="left">
+              <div className="home-section-number">01</div>
             </ScrollReveal>
 
-
-            <ScrollReveal
-              direction="up"
-              delay={120}
-            >
+            <ScrollReveal direction="up" delay={120}>
               <div className="home-intro-content">
-
                 <span className="home-eyebrow">
                   MORE THAN A GYM
                 </span>
@@ -186,64 +143,35 @@ function Home() {
                   forward.
                 </p>
 
-                <Link
-                  to="/programs"
-                  className="home-text-link"
-                >
+                <Link to="/programs" className="home-text-link">
                   Discover our training
                   <span>↗</span>
                 </Link>
-
               </div>
             </ScrollReveal>
 
-
-            <ScrollReveal
-              direction="right"
-              delay={200}
-            >
+            <ScrollReveal direction="right" delay={200}>
               <div className="home-intro-stat">
-
-                <strong>
-                  01
-                </strong>
-
+                <strong>01</strong>
                 <span>
                   MINDSET
                   <br />
                   FIRST
                 </span>
-
               </div>
             </ScrollReveal>
-
           </div>
-
         </div>
-
       </section>
 
-
-
-      {/* =====================================
-          STATS
-      ===================================== */}
+      {/* STATS */}
 
       <section className="home-stats">
-
         <div className="fc-container">
-
           <div className="home-stats-grid">
-
-            <ScrollReveal
-              direction="up"
-              delay={0}
-            >
+            <ScrollReveal direction="up" delay={0}>
               <div className="home-stat">
-                <strong>
-                  50+
-                </strong>
-
+                <strong>50+</strong>
                 <span>
                   TRAINING
                   <br />
@@ -252,16 +180,9 @@ function Home() {
               </div>
             </ScrollReveal>
 
-
-            <ScrollReveal
-              direction="up"
-              delay={120}
-            >
+            <ScrollReveal direction="up" delay={120}>
               <div className="home-stat">
-                <strong>
-                  12
-                </strong>
-
+                <strong>12</strong>
                 <span>
                   TRAINING
                   <br />
@@ -270,16 +191,9 @@ function Home() {
               </div>
             </ScrollReveal>
 
-
-            <ScrollReveal
-              direction="up"
-              delay={240}
-            >
+            <ScrollReveal direction="up" delay={240}>
               <div className="home-stat">
-                <strong>
-                  06
-                </strong>
-
+                <strong>06</strong>
                 <span>
                   DAYS
                   <br />
@@ -288,16 +202,9 @@ function Home() {
               </div>
             </ScrollReveal>
 
-
-            <ScrollReveal
-              direction="up"
-              delay={360}
-            >
+            <ScrollReveal direction="up" delay={360}>
               <div className="home-stat">
-                <strong>
-                  100%
-                </strong>
-
+                <strong>100%</strong>
                 <span>
                   FOCUS ON
                   <br />
@@ -305,31 +212,17 @@ function Home() {
                 </span>
               </div>
             </ScrollReveal>
-
           </div>
-
         </div>
-
       </section>
 
-
-
-      {/* =====================================
-          TRAINING SYSTEMS
-      ===================================== */}
+      {/* TRAINING SYSTEMS */}
 
       <section className="home-programs">
-
         <div className="fc-container">
-
-
-          <ScrollReveal
-            direction="up"
-          >
+          <ScrollReveal direction="up">
             <div className="home-section-heading">
-
               <div>
-
                 <span className="home-eyebrow">
                   TRAINING SYSTEMS
                 </span>
@@ -339,105 +232,62 @@ function Home() {
                   <br />
                   <span>EDGE.</span>
                 </h2>
-
               </div>
 
               <span className="home-heading-number">
                 02 / 05
               </span>
-
             </div>
           </ScrollReveal>
 
-
-
           <div className="home-program-list">
+            {programs.map((program, index) => (
+              <ScrollReveal
+                key={program.number}
+                direction={index % 2 === 0 ? "left" : "right"}
+                delay={index * 140}
+              >
+                <article className="home-program-card">
+                  <div className="home-program-image scroll-image-reveal">
+                    <img
+                      src={program.image}
+                      alt={program.title}
+                      loading="lazy"
+                    />
 
-            {programs.map(
-              (program, index) => (
+                    <div className="home-program-image-overlay"></div>
 
-                <ScrollReveal
-                  key={program.number}
-                  direction={
-                    index % 2 === 0
-                      ? "left"
-                      : "right"
-                  }
-                  delay={
-                    index * 140
-                  }
-                >
+                    <span className="home-program-number">
+                      {program.number}
+                    </span>
+                  </div>
 
-                  <article className="home-program-card">
+                  <div className="home-program-info">
+                    <h3>{program.title}</h3>
+                    <p>{program.text}</p>
 
-                    <div className="home-program-image scroll-image-reveal">
-
-                      <img
-                        src={program.image}
-                        alt={program.title}
-                        loading="lazy"
-                      />
-
-                      <div className="home-program-image-overlay"></div>
-
-                      <span className="home-program-number">
-                        {program.number}
-                      </span>
-
-                    </div>
-
-
-                    <div className="home-program-info">
-
-                      <h3>
-                        {program.title}
-                      </h3>
-
-                      <p>
-                        {program.text}
-                      </p>
-
-                      <Link
-                        to="/programs"
-                        className="home-program-link"
-                      >
-                        Explore
-                        <span>↗</span>
-                      </Link>
-
-                    </div>
-
-                  </article>
-
-                </ScrollReveal>
-
-              )
-            )}
-
+                    <Link
+                      to="/programs"
+                      className="home-program-link"
+                    >
+                      Explore
+                      <span>↗</span>
+                    </Link>
+                  </div>
+                </article>
+              </ScrollReveal>
+            ))}
           </div>
-
         </div>
-
       </section>
 
-
-
-      {/* =====================================
-          FEATURE
-      ===================================== */}
+      {/* FEATURE */}
 
       <section className="home-feature">
-
         <div className="fc-container">
-
           <div className="home-feature-grid">
-
-
-            <ScrollReveal
-              direction="left"
-            >
+            <ScrollReveal direction="left">
               <div className="home-feature-image scroll-image-reveal">
-
                 <img
                   src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1600&q=90"
                   alt="FITCORE strength training"
@@ -449,18 +299,11 @@ function Home() {
                 <span className="home-feature-tag">
                   TRAIN HARD / TRAIN SMART
                 </span>
-
               </div>
             </ScrollReveal>
 
-
-
-            <ScrollReveal
-              direction="right"
-              delay={160}
-            >
+            <ScrollReveal direction="right" delay={160}>
               <div className="home-feature-content">
-
                 <span className="home-eyebrow">
                   THE FITCORE METHOD
                 </span>
@@ -480,70 +323,39 @@ function Home() {
                   the gym.
                 </p>
 
-
                 <div className="home-feature-points">
-
                   <div>
                     <span>01</span>
-                    <strong>
-                      Structured Training
-                    </strong>
+                    <strong>Structured Training</strong>
                   </div>
 
                   <div>
                     <span>02</span>
-                    <strong>
-                      Progressive Overload
-                    </strong>
+                    <strong>Progressive Overload</strong>
                   </div>
 
                   <div>
                     <span>03</span>
-                    <strong>
-                      Performance Focus
-                    </strong>
+                    <strong>Performance Focus</strong>
                   </div>
-
                 </div>
 
-
-                <Link
-                  to="/trainers"
-                  className="fc-button"
-                >
-                  <span>
-                    Meet Our Trainers
-                  </span>
-
-                  <span>
-                    ↗
-                  </span>
+                <Link to="/trainers" className="fc-button">
+                  <span>Meet Our Trainers</span>
+                  <span>↗</span>
                 </Link>
-
               </div>
             </ScrollReveal>
-
           </div>
-
         </div>
-
       </section>
 
-
-
-      {/* =====================================
-          PHILOSOPHY
-      ===================================== */}
+      {/* PHILOSOPHY */}
 
       <section className="home-philosophy">
-
         <div className="fc-container">
-
-          <ScrollReveal
-            direction="scale"
-          >
+          <ScrollReveal direction="scale">
             <div className="home-philosophy-inner">
-
               <span className="home-eyebrow">
                 OUR PHILOSOPHY
               </span>
@@ -563,41 +375,26 @@ function Home() {
                 consistently create extraordinary
                 results.
               </p>
-
             </div>
           </ScrollReveal>
-
         </div>
-
       </section>
 
-
-
-      {/* =====================================
-          FINAL CTA
-      ===================================== */}
+      {/* FINAL CTA */}
 
       <section className="home-final-cta">
-
         <div className="home-final-background">
-
           <img
             src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=2200&q=90"
             alt="FITCORE training floor"
             loading="lazy"
           />
-
         </div>
 
         <div className="home-final-overlay"></div>
 
-
         <div className="fc-container home-final-content">
-
-          <ScrollReveal
-            direction="up"
-          >
-
+          <ScrollReveal direction="up">
             <span className="home-eyebrow">
               YOUR NEXT LEVEL
             </span>
@@ -613,26 +410,90 @@ function Home() {
               by accident. Start building it today.
             </p>
 
-            <Link
-              to="/membership"
-              className="fc-button"
-            >
-              <span>
-                Join FITCORE
-              </span>
-
-              <span>
-                ↗
-              </span>
+            <Link to="/membership" className="fc-button">
+              <span>Join FITCORE</span>
+              <span>↗</span>
             </Link>
-
           </ScrollReveal>
-
         </div>
-
       </section>
 
+      {/* =========================================
+          GYM LOCATION — CANARY WHARF, LONDON
+      ========================================= */}
 
+      <section className="home-location">
+        <div className="fc-container">
+          <ScrollReveal direction="up">
+            <div className="home-location-heading">
+              <span className="home-eyebrow">
+                FIND YOUR FITNESS DESTINATION
+              </span>
+
+              <h2>
+                TRAIN WITH US
+                <br />
+                <span>IN LONDON.</span>
+              </h2>
+
+              <p>
+                Find us around Canary Wharf and plan
+                your journey to FITCORE.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={120}>
+            <div className="home-location-card">
+              <div className="home-location-map">
+                <iframe
+                  title="Map of Canary Wharf, London"
+                  src={mapUrl}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+                <a
+                  className="home-location-map-link"
+                  href="https://www.google.com/maps/search/?api=1&query=Canary+Wharf%2C+London%2C+United+Kingdom"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open map ↗
+                </a>
+              </div>
+
+              <div className="home-location-details">
+                <div className="home-location-pin">
+                  <span aria-hidden="true">↗</span>
+                </div>
+
+                <div className="home-location-address">
+                  <span className="home-location-label">
+                    OUR LOCATION
+                  </span>
+
+                  <h3>FITCORE London</h3>
+
+                  <p>
+                    Canary Wharf, London,
+                    United Kingdom
+                  </p>
+                </div>
+
+                <a
+                  className="home-location-directions"
+                  href={directionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get Directions <span>↗</span>
+                </a>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
     </div>
   );
 }
