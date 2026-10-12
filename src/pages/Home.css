@@ -1014,7 +1014,7 @@
 }
 
 .home-location-heading h2 span {
-  color: var(--fc-accent, #e63946);
+  color: var(--fc-accent, #d8ff3e);
 }
 
 .home-location-heading p {
@@ -1074,7 +1074,7 @@
   flex-shrink: 0;
   border-radius: 12px;
   background: rgba(230, 57, 70, 0.12);
-  color: var(--fc-accent, #e63946);
+  color: var(--fc-accent, #d8ff3e);
   font-size: 25px;
 }
 
@@ -1089,7 +1089,7 @@
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 2px;
-  color: var(--fc-accent, #e63946);
+  color: var(--fc-accent, #d8ff3e);
 }
 
 .home-location-address h3 {
@@ -1112,7 +1112,7 @@
   min-height: 48px;
   padding: 13px 20px;
   border-radius: 7px;
-  background: var(--fc-accent, #e63946);
+  background: var(--fc-accent, #d8ff3e);
   color: #fff;
   font-size: 14px;
   font-weight: 700;
